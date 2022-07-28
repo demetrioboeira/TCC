@@ -1,0 +1,137 @@
+Bulk mode; whois.cymru.com [2022-07-27 11:28:27 +0000]
+42      | 204.19.119.1     | WOODYNET-1, US
+42      | 204.26.57.1      | WOODYNET-1, US
+42      | 2620:171:800:714::1                      | WOODYNET-1, US
+42      | 2620:171:801:714::1                      | WOODYNET-1, US
+714     | 17.253.200.1     | APPLE-ENGINEERING, US
+714     | 17.253.207.1     | APPLE-ENGINEERING, US
+714     | 2620:149:ae0::53                         | APPLE-ENGINEERING, US
+714     | 2620:149:ae7::53                         | APPLE-ENGINEERING, US
+2716    | 200.19.246.22    | Universidade Federal do Rio Grande do Sul, BR
+2716    | 200.19.246.22    | Universidade Federal do Rio Grande do Sul, BR
+2716    | 2804:0:0:aaaa::1                         | Universidade Federal do Rio Grande do Sul, BR
+2716    | 2804:0:0:aaaa::1                         | Universidade Federal do Rio Grande do Sul, BR
+6619    | 112.106.53.58    | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 112.107.53.58    | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 2001:330:a:300a:203:241:132:51           | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 2001:330:a:300b:112:107:53:58            | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 2001:330:a:a:203:241:135:51              | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 2001:330:a:b:112:106:53:58               | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.132.185  | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.132.185  | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.132.185  | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.132.51   | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.135.185  | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+6619    | 203.241.135.51   | SAMSUNGSDS-AS-KR SamsungSDS Inc., KR
+8075    | 13.107.206.39    | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 13.107.222.39    | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 150.171.10.39    | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 150.171.16.39    | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 2603:1061:0:10::27                       | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 2620:1ec:8ec:10::27                      | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 2620:1ec:bda:10::27                      | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8075    | 2a01:111:4000:10::27                     | MICROSOFT-CORP-MSN-AS-BLOCK, US
+8167    | 189.11.154.199   | V tal, BR
+8167    | 189.11.154.199   | V tal, BR
+8167    | 200.193.72.71    | V tal, BR
+8167    | 200.193.72.71    | V tal, BR
+10906   | 2001:12f8:8::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+10906   | 2001:12f8:9:1::11                        | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+10906   | 200.189.40.11    | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+10906   | 200.189.41.10    | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+11271   | 200.218.129.144  | SENCINET LATAM BRASIL LTDA, BR
+11271   | 200.218.129.144  | SENCINET LATAM BRASIL LTDA, BR
+11271   | 200.218.129.145  | SENCINET LATAM BRASIL LTDA, BR
+11271   | 200.218.129.145  | SENCINET LATAM BRASIL LTDA, BR
+11284   | 2001:12f8:a::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+11284   | 200.192.233.10   | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+11644   | 2001:12f8:4::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+11644   | 200.219.154.10   | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+12136   | 2001:12f8:2::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+12136   | 200.229.248.10   | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+13335   | 172.64.34.27     | CLOUDFLARENET, US
+13335   | 173.245.59.158   | CLOUDFLARENET, US
+13335   | 2606:4700:58::adf5:3b9e                  | CLOUDFLARENET, US
+13335   | 2803:f800:50::6ca2:c21b                  | CLOUDFLARENET, US
+13878   | 189.36.82.64     | UOL DIVEO S.A., BR
+13878   | 189.36.82.64     | UOL DIVEO S.A., BR
+13878   | 189.36.82.65     | UOL DIVEO S.A., BR
+13878   | 189.36.82.65     | UOL DIVEO S.A., BR
+14618   | 3.214.43.119     | AMAZON-AES, US
+14618   | 3.214.43.119     | AMAZON-AES, US
+14650   | 2001:12f8:c::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+14650   | 200.219.159.10   | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+15169   | 2001:4860:4802:32::a                     | GOOGLE, US
+15169   | 2001:4860:4802:34::a                     | GOOGLE, US
+15169   | 2001:4860:4802:36::a                     | GOOGLE, US
+15169   | 2001:4860:4802:38::a                     | GOOGLE, US
+15169   | 216.239.32.10    | GOOGLE, US
+15169   | 216.239.34.10    | GOOGLE, US
+15169   | 216.239.36.10    | GOOGLE, US
+15169   | 216.239.38.10    | GOOGLE, US
+16509   | 205.251.192.44   | AMAZON-02, US
+16509   | 205.251.192.81   | AMAZON-02, US
+16509   | 205.251.193.196  | AMAZON-02, US
+16509   | 205.251.193.224  | AMAZON-02, US
+16509   | 205.251.194.147  | AMAZON-02, US
+16509   | 205.251.195.133  | AMAZON-02, US
+16509   | 205.251.195.250  | AMAZON-02, US
+16509   | 205.251.195.48   | AMAZON-02, US
+16509   | 205.251.196.143  | AMAZON-02, US
+16509   | 205.251.196.162  | AMAZON-02, US
+16509   | 205.251.197.19   | AMAZON-02, US
+16509   | 205.251.197.92   | AMAZON-02, US
+16509   | 205.251.198.166  | AMAZON-02, US
+16509   | 205.251.199.143  | AMAZON-02, US
+16509   | 205.251.199.192  | AMAZON-02, US
+16509   | 205.251.199.202  | AMAZON-02, US
+16509   | 2600:9000:5300:2c00::1                   | AMAZON-02, US
+16509   | 2600:9000:5300:5100::1                   | AMAZON-02, US
+16509   | 2600:9000:5301:c400::1                   | AMAZON-02, US
+16509   | 2600:9000:5301:e000::1                   | AMAZON-02, US
+16509   | 2600:9000:5302:9300::1                   | AMAZON-02, US
+16509   | 2600:9000:5303:3000::1                   | AMAZON-02, US
+16509   | 2600:9000:5303:8500::1                   | AMAZON-02, US
+16509   | 2600:9000:5303:fa00::1                   | AMAZON-02, US
+16509   | 2600:9000:5304:8f00::1                   | AMAZON-02, US
+16509   | 2600:9000:5304:a200::1                   | AMAZON-02, US
+16509   | 2600:9000:5305:1300::1                   | AMAZON-02, US
+16509   | 2600:9000:5305:5c00::1                   | AMAZON-02, US
+16509   | 2600:9000:5306:a600::1                   | AMAZON-02, US
+16509   | 2600:9000:5307:8f00::1                   | AMAZON-02, US
+16509   | 2600:9000:5307:c000::1                   | AMAZON-02, US
+16509   | 2600:9000:5307:ca00::1                   | AMAZON-02, US
+16509   | 52.79.211.80     | AMAZON-02, US
+16509   | 52.79.211.80     | AMAZON-02, US
+19200   | 143.54.1.58      | Universidade Federal do Rio Grande do Sul, BR
+19200   | 143.54.1.59      | Universidade Federal do Rio Grande do Sul, BR
+19200   | 2804:1f20:0:1000::58                     | Universidade Federal do Rio Grande do Sul, BR
+19200   | 2804:1f20:0:1000::59                     | Universidade Federal do Rio Grande do Sul, BR
+21342   | 193.108.91.190   | AKAMAI-ASN2, NL
+21342   | 2.22.230.67      | AKAMAI-ASN2, NL
+21342   | 2600:1401:2::be                          | AKAMAI-ASN2, NL
+21342   | 2600:1480:800::43                        | AKAMAI-ASN2, NL
+21342   | 2600:1480:b000::43                       | AKAMAI-ASN2, NL
+21342   | 2a02:26f0:67::40                         | AKAMAI-ASN2, NL
+21342   | 72.246.46.66     | AKAMAI-ASN2, NL
+21342   | 72.246.46.66     | AKAMAI-ASN2, NL
+21342   | 95.100.168.67    | AKAMAI-ASN2, NL
+21342   | 95.100.173.65    | AKAMAI-ASN2, NL
+21342   | 95.100.173.65    | AKAMAI-ASN2, NL
+21342   | 95.100.175.64    | AKAMAI-ASN2, NL
+22548   | 2001:12ff::11                            | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+22548   | 200.160.0.11     | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+32934   | 129.134.30.12    | FACEBOOK, US
+32934   | 129.134.31.12    | FACEBOOK, US
+32934   | 185.89.218.12    | FACEBOOK, US
+32934   | 185.89.219.12    | FACEBOOK, US
+32934   | 2a03:2880:f0fc:c:face:b00c:0:35          | FACEBOOK, US
+32934   | 2a03:2880:f0fd:c:face:b00c:0:35          | FACEBOOK, US
+32934   | 2a03:2880:f1fc:c:face:b00c:0:35          | FACEBOOK, US
+32934   | 2a03:2880:f1fd:c:face:b00c:0:35          | FACEBOOK, US
+53035   | 2001:12f8:6::10                          | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+53035   | 200.219.148.10   | Nucleo de Inf. e Coord. do Ponto BR - NIC., BR
+269224  | 2801:80:36e0:faca::a001                  | Universidade La Salle, BR
+269224  | 2801:80:36e0:faca::a002                  | Universidade La Salle, BR
+269224  | 45.181.173.2     | Universidade La Salle, BR
+269224  | 45.181.173.3     | Universidade La Salle, BR
