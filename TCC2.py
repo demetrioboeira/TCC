@@ -1,13 +1,14 @@
 import dns.resolver
 import subprocess
 import os
+import re
 #NS = dns.resolver.resolve(domain, 'NS')
 NSlist = []
 Domainlist = []
 with open ('DomainList.txt' , 'r') as dominios:
 	for dominio in dominios:
 		Domainlist.append(dominio)
-		
+
 for dominio in Domainlist:
 	dominio = dominio[:-1]
 	#print (dominio)
@@ -18,10 +19,6 @@ for dominio in Domainlist:
 				NSlist.append(item.to_text())
 	except:
 		continue
-
-#print(Domainlist)
-print (NSlist)
-
 
 Arecords = []
 AAAArecords = []
@@ -55,9 +52,9 @@ with open ('IpList.txt', 'w') as file:
 
 comand = "netcat whois.cymru.com 43 <IpList.txt | sort -n > listaordenada"
 
+'''
 os.system(comand)
 
-"""
 for A in Arecords:
 	temp = comand + " " + A + "'"
 	os.system(temp)
@@ -67,6 +64,3 @@ print (AAAArecords)
 for AAAA in AAAArecords:
 	temp = comand + " " + AAAA + "'"
 	os.system(temp)
-
-"""
-
