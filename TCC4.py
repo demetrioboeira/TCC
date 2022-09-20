@@ -4,7 +4,7 @@ import concurrent.futures
 import os
 import re
 #NS = dns.resolver.resolve(domain, 'NS')
-#teste
+
 Domainlist = []
 
 
