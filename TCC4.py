@@ -3,9 +3,11 @@ import subprocess
 import concurrent.futures
 import os
 import re
+from datetime import date
 #NS = dns.resolver.resolve(domain, 'NS')
 
 Domainlist = []
+
 
 
 with open ('trancolistreduzida.txt' , 'r') as dominios:
@@ -16,6 +18,8 @@ with open ('trancolistreduzida.txt' , 'r') as dominios:
 
 #print (Domainlist)
 NSlist = []
+
+dominioscomerro = []
 
 def getNSrecords (dominio):
 	domainNSList = []
@@ -34,8 +38,10 @@ def getNSrecords (dominio):
 				#print (NSlist)
 		#print (domainNSList)
 		return domainNSList
-	except:
-		pass
+	except Exception as erro:
+		global dominioscomerro
+		dominioscomerro.append(dominio)
+		
 
 	
 with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
@@ -47,8 +53,8 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 		except:
 			pass
 		
-
-print (NSlist)
+print (dominioscomerro)
+#print (NSlist)
 
 
 Arecords = []
@@ -108,13 +114,15 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 
 print (AAAArecords)
 
-with open ('IpList.txt', 'w') as file:
-	file.write("begin \n")
+today = date.today()
+
+with open ('Ipv4List.txt' + " " + str(today), 'w') as file:
 	for ip in Arecords:
 		file.write(ip)
 		file.write("\n")
+	
+with open ('Ipv6List.txt' + " " + str(today), 'w') as file:
 	for ip in AAAArecords:
 		file.write(ip)
-		file.write("\n")
-	file.write("end")	
+		file.write("\n")	
 

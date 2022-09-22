@@ -27,7 +27,26 @@ with open ("as2org.txt", "r") as asn:
 		asn = token[0]
 		org = token[2]
 		asnhash[asn] = org
-		
+	
+with open ("Ipv4List.txt 2022-09-21", "r") as listaip:
+	for line in listaip:
+		token = line.split('.')
+		token[3] = 0
+		mascara = str(token[0]) + "." + str(token[1]) + "." + str(token[2]) + "." + str(token[3])
+		try:
+			print (asnhash[iphash[mascara][:-1]])
+		except:
+			print ("mascara de rede " + mascara + " não encontrada na lista" )
 
-print (asnhash[ip6hash['2c0f:6400:1000::'][:-1]])
+'''			
+with open ("Ipv6List.txt 2022-09-21", "r") as listaip6:
+	for line in listaip6:
+		token = line.split(':')
+		mascara = str(token[0]) + ":" + str(token[1]) + ":" + str(token[2]) + "::"
+		try:
+			print(asnhash[ip6hash[mascara][:-1]])
+		except:
+			print ("mascara de rede " + mascara + " não encontrada na lista" )
+'''
+#print (asnhash[iphash['185.89.219.0'][:-1]])
 
