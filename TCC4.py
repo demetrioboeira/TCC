@@ -9,6 +9,17 @@ from datetime import date
 Domainlist = []
 
 
+class Dominio:
+	def __init__(self, nome, nsrecords, arecords, aaaarecords, empresa):
+		self.nome = nome
+		self.nsrecords = nsrecords
+		self.arecords = arecords
+		self.aaaarecords = aaaarecords
+		self.empresa = empresa
+	
+dominio1 = Dominio('google.com', Domainlist, Domainlist, 11, 'google')
+
+
 
 with open ('trancolistreduzida.txt' , 'r') as dominios:
 	for dominio in dominios:
@@ -19,7 +30,7 @@ with open ('trancolistreduzida.txt' , 'r') as dominios:
 #print (Domainlist)
 NSlist = []
 
-dominioscomerro = []
+
 
 def getNSrecords (dominio):
 	domainNSList = []
@@ -53,8 +64,7 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 		except:
 			pass
 		
-print (dominioscomerro)
-#print (NSlist)
+print (NSlist)
 
 
 Arecords = []
@@ -124,5 +134,4 @@ with open ('Ipv4List.txt' + " " + str(today), 'w') as file:
 with open ('Ipv6List.txt' + " " + str(today), 'w') as file:
 	for ip in AAAArecords:
 		file.write(ip)
-		file.write("\n")	
-
+		file.write("\n")
