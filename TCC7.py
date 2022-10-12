@@ -129,28 +129,13 @@ def getNSrecords (dominio):
 		#print (domainNSList)
 		
 		
-		
-		
-		
-		
-		with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-			for result in executor.map(getArecords, domainNSList):
-				try:
-					for item in result:
-						#print (item)
-						Arecords.append(item)
-				except:
-					pass
-			
-		with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-			for result in executor.map(getAAAArecords, domainNSList):
-				try:
-					for item in result:
-						#print (item)
-						AAAArecords.append(item)
-				except:
-					pass
-					
+		for nsrecord in domainNSList:
+			tempA = getArecords(nsrecord)
+			for ip in tempA:
+				Arecords.append(ip)
+			tempAAAA = getAAAArecords(nsrecord)
+			for ip in tempAAAA:
+				AAAArecords.append(ip)
 		
 		
 		
