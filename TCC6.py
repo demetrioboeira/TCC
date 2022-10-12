@@ -99,7 +99,7 @@ def getAAAArecords (nsrecord):
 		query = dns.resolver.resolve(nsrecord, 'AAAA')
 		for item in query:
 			AAAArecord.append(item.to_text())
-		#print (AAAArecord)
+		#print (Arecord)
 		return AAAArecord
 		
 	except:
@@ -112,8 +112,6 @@ def getNSrecords (dominio):
 	AAAArecords = []
 	dominio = dominio[:-1]
 	listaempresas = []
-	tempA = []
-	tempAAAA = []
 	#print (dominio)
 	
 	try:	
@@ -128,12 +126,7 @@ def getNSrecords (dominio):
 				#print (NSlist)
 		#print (domainNSList)
 		
-		
-		
-		
-		
-		
-		with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
+		with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 			for result in executor.map(getArecords, domainNSList):
 				try:
 					for item in result:
@@ -142,7 +135,7 @@ def getNSrecords (dominio):
 				except:
 					pass
 			
-		with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
+		with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 			for result in executor.map(getAAAArecords, domainNSList):
 				try:
 					for item in result:
@@ -150,11 +143,6 @@ def getNSrecords (dominio):
 						AAAArecords.append(item)
 				except:
 					pass
-					
-		
-		
-		
-		
 		for line in Arecords:
 			token = line.split('.')
 			token[3] = 0
@@ -183,6 +171,20 @@ def getNSrecords (dominio):
 			try:
 				dominio1 = Dominio(dominio, domainNSList, Arecords, AAAArecords, listaempresas)
 				print (dominio1.nome, dominio1.nsrecords, dominio1.arecords, dominio1.aaaarecords, dominio1.empresa)
+				'''
+				with open ('Medição dia' + " " + str(today), 'a') as file:
+						file.write('##############' + ' ' + dominio1.nome + ' ' + '##############')
+						file.write("\n")
+						file.write(dominio1.nsrecords)
+						file.write("\n")
+						file.write(dominio1.arecords)
+						file.write("\n")
+						file.write(dominio1.aaaarecords)
+						file.write("\n")
+						file.write(dominio1.empresa)
+						file.write("\n")
+						file.close()
+				'''
 			except:
 				pass
 		else:
@@ -198,7 +200,7 @@ def getNSrecords (dominio):
 		
 
 	
-with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
+with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 	for result in executor.map(getNSrecords, Domainlist):
-		pass
+		
 	
