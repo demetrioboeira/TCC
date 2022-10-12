@@ -106,7 +106,7 @@ def getAAAArecords (nsrecord):
 		pass
 
 
-def getNSrecords (dominio):
+def querydominio (dominio):
 	domainNSList = []
 	Arecords = []
 	AAAArecords = []
@@ -182,7 +182,7 @@ def getNSrecords (dominio):
 		
 
 	
-with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-	for result in executor.map(getNSrecords, Domainlist):
+with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
+	for result in executor.map(querydominio, Domainlist):
 		pass
 	
