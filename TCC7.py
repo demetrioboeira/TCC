@@ -165,8 +165,26 @@ def querydominio (dominio):
 		if len(listaempresas) != 0:
 			#print (listaempresas)
 			try:
-				dominio1 = Dominio(dominio, domainNSList, Arecords, AAAArecords, listaempresas)
-				print (dominio1.nome, dominio1.nsrecords, dominio1.arecords, dominio1.aaaarecords, dominio1.empresa)
+				print (dominio, domainNSList, Arecords, AAAArecords, listaempresas)
+				
+				
+				with open ('Medição dia1.txt', 'a') as file:
+						file.write('#######################################################')
+						file.write("\n")
+						file.write(str(dominio))
+						file.write("\n")
+						file.write(str(domainNSList))
+						file.write("\n")
+						file.write(str(Arecords))
+						file.write("\n")
+						file.write(str(AAAArecords))
+						file.write("\n")
+						file.write(str(listaempresas))
+						file.write("\n")
+						file.write('#######################################################')
+						file.write("\n")
+						file.close()
+				
 			except:
 				pass
 		else:
