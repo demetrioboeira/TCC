@@ -9,6 +9,10 @@ from datetime import date
 iphash = {}
 ip6hash = {}
 asnhash = {}
+erro = 0
+certo = 0
+
+print (erro, certo)
 
 with open ("ip2as.txt", "r") as ip:
 	for line in ip:
@@ -165,30 +169,32 @@ def querydominio (dominio):
 		if len(listaempresas) != 0:
 			#print (listaempresas)
 			try:
+				global certo 
+				certo = certo + 1
 				print (dominio, domainNSList, Arecords, AAAArecords, listaempresas)
 				
-				
-				with open ('Medição dia1.txt', 'a') as file:
+			
+				with open ('Medição dia' + str(date.today()), 'a') as file:
 						file.write('#######################################################')
 						file.write("\n")
+						file.write("dominio \n")
 						file.write(str(dominio))
-						file.write("\n")
+						file.write("\nlista de NS records \n")
 						file.write(str(domainNSList))
-						file.write("\n")
+						file.write("\nlista de A records \n")
 						file.write(str(Arecords))
-						file.write("\n")
+						file.write("\nlista de AAAA records \n")
 						file.write(str(AAAArecords))
-						file.write("\n")
+						file.write("\nlista de empresas \n")
 						file.write(str(listaempresas))
-						file.write("\n")
-						file.write('#######################################################')
 						file.write("\n")
 						file.close()
 				
 			except:
 				pass
 		else:
-
+			global erro
+			erro = erro + 1
 			print ('nao encontrado a empresa do dominio' + '' + dominio)
 		
 		
@@ -204,3 +210,4 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 	for result in executor.map(querydominio, Domainlist):
 		pass
 	
+print (erro, certo)
