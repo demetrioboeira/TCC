@@ -9,10 +9,7 @@ from datetime import date
 iphash = {}
 ip6hash = {}
 asnhash = {}
-erro = 0
-certo = 0
 
-print (erro, certo)
 
 with open ("ip2as.txt", "r") as ip:
 	for line in ip:
@@ -169,8 +166,7 @@ def querydominio (dominio):
 		if len(listaempresas) != 0:
 			#print (listaempresas)
 			try:
-				global certo 
-				certo = certo + 1
+				
 				print (dominio, domainNSList, Arecords, AAAArecords, listaempresas)
 				
 			
@@ -193,9 +189,10 @@ def querydominio (dominio):
 			except:
 				pass
 		else:
-			global erro
-			erro = erro + 1
-			print ('nao encontrado a empresa do dominio' + '' + dominio)
+			with open ('Erro Medição dia' + str(date.today()), 'a') as file:
+				file.write('nao encontrado a empresa do dominio' + '' + dominio)
+				file.write('\n')
+
 		
 		
 		#return domainNSList
@@ -210,4 +207,3 @@ with concurrent.futures.ProcessPoolExecutor(max_workers=200) as executor:
 	for result in executor.map(querydominio, Domainlist):
 		pass
 	
-print (erro, certo)
