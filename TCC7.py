@@ -5,6 +5,7 @@ import os
 import re
 from datetime import date
 
+import downloader
 
 iphash = {}
 ip6hash = {}
