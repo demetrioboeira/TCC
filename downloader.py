@@ -42,11 +42,11 @@ as2organization = result[-1]
 
 tranco = 'https://tranco-list.s3.amazonaws.com/tranco_VXYGN-1m.csv.zip'
 
-print('Dowloading Tranco List\n')
+print('Downloading Tranco List\n')
 wget.download(tranco)
-print('\nDowloading Prefix2AS\n')
+print('\nDownloading Prefix2AS\n')
 wget.download(prefix2as)
-print('\nDowloading AS2Organization\n')
+print('\nDownloading AS2Organization\n')
 wget.download(as2organization)
 
 
