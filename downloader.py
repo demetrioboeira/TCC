@@ -11,41 +11,42 @@ import requests
 # Get month to use in prefix2as url
 month = datetime.now().month
 
+def listFD(url, ext=''):
+    page = requests.get(url).text
+    soup = BeautifulSoup(page, 'html.parser')
+    return [url + '/' + node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
+
 def gunzip_shutil(source_filepath, dest_filepath, block_size=65536):
     with gzip.open(source_filepath, 'rb') as s_file, \
             open(dest_filepath, 'wb') as d_file:
         shutil.copyfileobj(s_file, d_file, block_size)
 
-url = f'https://publicdata.caida.org/datasets/routing/routeviews-prefix2as/2022/{month}/'
+url_prefix2as_ipv4 = f'https://publicdata.caida.org/datasets/routing/routeviews-prefix2as/2022/{month}/'
 ext = 'gz'
 
-def listFD(url, ext=''):
-    page = requests.get(url).text
-    soup = BeautifulSoup(page, 'html.parser')
-    return [url + '/' + node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
+url_prefix2as_ipv6 = f'https://publicdata.caida.org/datasets/routing/routeviews6-prefix2as/2022/{month}/'
+ext = 'gz'
 
-result = listFD(url, ext)
+result = listFD(url_prefix2as_ipv4, ext)
+prefix2as_ipv4 = result[-1]
 
-prefix2as = result[-1]
+result = listFD(url_prefix2as_ipv6, ext)
+prefix2as_ipv6 = result[-1]
 
-url = f'https://publicdata.caida.org/datasets/as-organizations/'
-ext = 'txt.gz'
+url_as2organization = f'https://publicdata.caida.org/datasets/as-organizations/'
+ext_as2organization = 'txt.gz'
 
-def listFD(url, ext=''):
-    page = requests.get(url).text
-    soup = BeautifulSoup(page, 'html.parser')
-    return [url + '/' + node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
-
-result = listFD(url, ext)
-
+result = listFD(url_as2organization, ext_as2organization)
 as2organization = result[-1]
 
 tranco = 'https://tranco-list.s3.amazonaws.com/tranco_VXYGN-1m.csv.zip'
 
 print('Downloading Tranco List\n')
 wget.download(tranco)
-print('\nDownloading Prefix2AS\n')
-wget.download(prefix2as)
+print('\nDownloading Prefix2ASIPv4\n')
+wget.download(prefix2as_ipv4)
+print('\nDownloading Prefix2ASIPv6\n')
+wget.download(prefix2as_ipv6)
 print('\nDownloading AS2Organization\n')
 wget.download(as2organization)
 
