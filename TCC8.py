@@ -15,7 +15,7 @@ asnhash = {}
 pastanova = "Resultados" + str(date.today())
 os.mkdir(pastanova)
 
-arquivo = glob.glob('*.pfx2as')
+arquivo = glob.glob('routeviews-rv2*')
 arquivo = str(arquivo)
 arquivo = arquivo[:-2]
 arquivo = arquivo[2:]
@@ -30,8 +30,12 @@ with open (arquivo, "r") as ip:
 
 os.remove(arquivo)			
 
+arquivo = glob.glob('routeviews-rv6*')
+arquivo = str(arquivo)
+arquivo = arquivo[:-2]
+arquivo = arquivo[2:]
 
-with open ("ip62as.txt", "r") as ip6:
+with open (arquivo, "r") as ip6:
 	for line in ip6:
 		token = line.split('	')
 		rede = token[0]
