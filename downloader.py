@@ -10,6 +10,7 @@ import requests
 
 # Get month to use in prefix2as url
 month = datetime.now().month
+year = datetime.now().year
 
 def listFD(url, ext=''):
     page = requests.get(url).text
@@ -21,10 +22,10 @@ def gunzip_shutil(source_filepath, dest_filepath, block_size=65536):
             open(dest_filepath, 'wb') as d_file:
         shutil.copyfileobj(s_file, d_file, block_size)
 
-url_prefix2as_ipv4 = f'https://publicdata.caida.org/datasets/routing/routeviews-prefix2as/2022/{month}/'
+url_prefix2as_ipv4 = f'https://publicdata.caida.org/datasets/routing/routeviews-prefix2as/{year}/0{month}/'
 ext = 'gz'
 
-url_prefix2as_ipv6 = f'https://publicdata.caida.org/datasets/routing/routeviews6-prefix2as/2022/{month}/'
+url_prefix2as_ipv6 = f'https://publicdata.caida.org/datasets/routing/routeviews6-prefix2as/{year}/0{month}/'
 ext = 'gz'
 
 result = listFD(url_prefix2as_ipv4, ext)
