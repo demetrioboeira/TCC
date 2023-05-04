@@ -1,0 +1,23 @@
+import sqlite3
+
+# Abre a conexão com o banco de dados ou cria um novo se não existir
+conn = sqlite3.connect('/home/Demetrio/Documentos/TCC/medicoes.db')
+
+# Cria a tabela se não existir
+conn.execute('CREATE TABLE IF NOT EXISTS medicao_22_24_12 (empresa TEXT, quantidade INTEGER, porcentagem REAL)')
+
+# Lê o arquivo de medições de concentração
+with open('Concentracao dia 2022-12-24', 'r') as f:
+    lines = f.readlines()
+
+# Insere cada medição na tabela
+for line in lines:
+    empresa, quantidade, porcentagem = line.strip().split(':')
+    quantidade = int(quantidade)
+    porcentagem = float(porcentagem)
+    conn.execute('INSERT INTO medicao_22_24_12 (empresa, quantidade, porcentagem) VALUES (?, ?, ?)', (empresa, quantidade, porcentagem))
+
+# Salva as mudanças e fecha a conexão com o banco de dados
+conn.commit()
+conn.close()
+

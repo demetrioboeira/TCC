@@ -1,0 +1,33 @@
+import sqlite3
+import json
+# Abre a conexão com o banco de dados ou cria um novo se não existir
+conn = sqlite3.connect('/home/Demetrio/Documentos/TCC/arvores.db')
+
+# Cria a tabela se não existir
+conn.execute('CREATE TABLE IF NOT EXISTS arvore_22_24_12 (dominio TEXT, NSrecords TEXT, Arecords TEXT , AAAArecords TEXT, empresas TEXT)')
+
+# Lê o arquivo de arvores de DNS
+
+with open('Medição dia2022-12-24', 'r') as file:
+    lines = file.readlines()
+    for i, line in enumerate(lines):
+        if 'dominio' in line:
+            domain = lines[i+1].strip()
+        elif 'lista de NS records' in line:
+            ns_records = lines[i+1].strip()
+            ns_records = json.dumps(ns_records)
+        elif 'lista de A records' in line:
+            a_records = lines[i+1].strip()
+            a_records = json.dumps(a_records)
+        elif 'lista de AAAA records' in line:
+            aaaa_records = lines[i+1].strip()
+            aaaa_records = json.dumps(aaaa_records)
+        elif 'lista de empresas' in line:
+            companies = lines[i+1].strip()
+            companies = json.dumps(companies)
+            conn.execute('INSERT INTO arvore_22_24_12 (dominio, NSrecords, Arecords, AAAArecords, empresas) VALUES (?, ?, ?, ?, ?)', (domain, ns_records, a_records, aaaa_records, companies))
+	
+# Salva as mudanças e fecha a conexão com o banco de dados
+conn.commit()
+conn.close()
+

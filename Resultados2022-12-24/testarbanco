@@ -1,0 +1,17 @@
+import sqlite3
+
+# Conectar-se ao banco de dados
+conn = sqlite3.connect('/home/Demetrio/Documentos/TCC/medicoes.db')
+
+# Executar uma consulta SQL
+cur = conn.cursor()
+cur.execute('SELECT * FROM medicao_22_24_12')
+rows = cur.fetchall()
+
+# Imprimir os dados da tabela
+for row in rows:
+    print(row)
+
+# Fechar a conexão com o banco de dados
+conn.close()
+
